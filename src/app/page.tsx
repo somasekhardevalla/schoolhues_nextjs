@@ -1,6 +1,10 @@
 import { Inter } from "next/font/google"
 import Image from "next/image"
 import Carouseal from "./carouseal"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faLinkedin,faTwitter,faInstagram} from "@fortawesome/free-brands-svg-icons"
+import { faSearch,faLocation,faCode } from "@fortawesome/free-solid-svg-icons"
+import { faFolder } from "@fortawesome/free-regular-svg-icons"
 export default function Home() {
   return (
     <div>
@@ -8,8 +12,38 @@ export default function Home() {
 
    <div className="w-full h-auto bg-cyan-100" >
     <h2 className="pt-40 text-center font-{Inter} font-medium text-3xl ">Over <mark className="bg-cyan-100 text-blue-600">1200+</mark>Jobs are waiting for you</h2>
-    <div className="bg-white w-2/4 h-16 ml-96 rounded-full mt-8"></div>
-    <p className="pb-36 text-center mt-5">Popular searches</p>
+    <div className="bg-white w-3/5 h-16 ml-72 rounded-full mt-8">
+      <form action="" className="h-full flex">
+        <FontAwesomeIcon icon={faSearch} className="mt-6 ml-5"></FontAwesomeIcon>
+      <input list="browsers" name="browser" placeholder="job Title or Keywords" className="  placeholder:font-normal placeholder:font-{Inter} placeholder:text-black w-48 h-full ml-3 border-r border-solid border-gray-300 rounded-tl-full rounded-bl-full focus:outline-none"/>
+       <datalist id="browsers" className="w-40 h-32 font-{Inter} appearance-none border border-b-blue-900 border-solid">
+          <option value="Internet Explorer" className="appearance-none"/>
+          <option value="Firefox"/>
+          <option value="Chrome"/>
+          <option value="Opera"/>
+          <option value="Safari"/>
+       </datalist>
+       <FontAwesomeIcon icon={faLocation} className="mt-6 ml-5 text-xl"></FontAwesomeIcon>
+      <input list="browsers" name="browser" placeholder="job Title or Keywords" className="  placeholder:font-normal placeholder:text-black w-48 h-full ml-3 border-r border-solid border-gray-300 rounded-tl-full rounded-bl-full focus:outline-none"/>
+       <datalist id="browsers" className="w-40 h-32 font-{Inter} appearance-none border border-b-blue-900 border-solid">
+          <option value="Internet Explorer" className="appearance-none"/>
+          <option value="Firefox"/>
+          <option value="Chrome"/>
+          <option value="Opera"/>
+          <option value="Safari"/>
+       </datalist>
+       <FontAwesomeIcon icon={faFolder} className="mt-6 ml-5 text-xl"></FontAwesomeIcon>
+       <select name="cars" id="cars" className="w-44 focus:outline-none border-r border-solid border-gray-300 pl-3 ">
+         <option value="volvo">All Categories</option>
+         <option value="saab">Saab</option>
+         <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+  </select>
+ <input type="reset" value="Clear" className="pl-7 cursor-pointer hover:text-cyan-600" />
+ <input type="submit" value="Search" className="bg-sky-600 w-20 h-9 rounded-full ml-5 mt-3 text-white cursor-pointer" />
+      </form>
+    </div>
+    <p className="pb-32 text-center mt-9">Popular searches: <a href="" className="hover:text-cyan-600">Communication</a>,<a href="" className="hover:text-cyan-600">Empathy</a></p>
    </div >
 
 
@@ -32,7 +66,7 @@ export default function Home() {
     <p className="text-center font-{Inter} font-normal text-lg pt-5">Browse openings in those categories</p>
            <div className="h-72 w-5/6 ml-32  flex ">
               <div className="w-48 h-52 bg-cyan-300 ml-10 mt-16 mr-10 rounded-xl">
-                <div className="w-16 h-16 bg-cyan-600 rounded-full  ml-16 mt-8 pt-5 text-white font-medium">Logo</div>
+                <div className="w-16 h-16 bg-cyan-600 rounded-full  ml-16 mt-8 pt-5 text-white font-medium"> <FontAwesomeIcon icon={faCode} className="text-xl"/></div>
                 <div className="w-full h-1/2">
                   <p className="pt-8 font-{Inter}  font-semibold text-lg ">Primary <br /> Teacher</p>
                 </div>
@@ -70,8 +104,13 @@ export default function Home() {
        <br />
        <a  className=" font-semibold "href="tel:+91 9685511620">+91 9685511620</a><br /><br />
        <a className="font-semibold" href="mailto:hello@schoolhues.com">hello@schoolhues.com</a>
+       <br />
+       <FontAwesomeIcon icon={faLinkedin} className="text-2xl mt-5 hover:text-cyan-600"/>
+       <FontAwesomeIcon icon={faTwitter} className="text-2xl mt-5  ml-5 hover:text-cyan-600"/>
+       <FontAwesomeIcon icon={faInstagram} className="text-2xl mt-5 ml-5 hover:text-cyan-600"/>
+       <FontAwesomeIcon icon={faFacebook} className="text-2xl mt-5 ml-5 hover:text-cyan-600"/>
         </div>
-
+ 
     <div className="w-1/3 h-full flex mt-12"> 
     <div className="w-1/2 h-full flex-col">
       <h2 className="font-{Inter} font-medium  ">Company</h2>
