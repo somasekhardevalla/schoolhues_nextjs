@@ -1,113 +1,105 @@
-import Image from 'next/image'
-
+import { Inter } from "next/font/google"
+import Image from "next/image"
+import Carouseal from "./carouseal"
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      {/* main content */}
+
+   <div className="w-full h-auto bg-cyan-100" >
+    <h2 className="pt-40 text-center font-{Inter} font-medium text-3xl ">Over <mark className="bg-cyan-100 text-blue-600">1200+</mark>Jobs are waiting for you</h2>
+    <div className="bg-white w-2/4 h-16 ml-96 rounded-full mt-8"></div>
+    <p className="pb-36 text-center mt-5">Popular searches</p>
+   </div >
+
+
+{/* Craouseal */}
+
+
+   <div className="w-full h-auto mt-20" >
+    <h2 className="text-center font-{Inter} font-semibold text-2xl mb-5 ">Current Vacancies in Different Schools</h2>
+    <p className="text-center font-{Inter} font-medium mb-10 ">Find schools that deserve you!</p>
+     <Carouseal/>
+     <div className="text-center">
+     <button className='bg-sky-600 rounded-full w-40 h-9 text-white text-center font-semibold text-sm mt-4'>View all schools</button>
+     </div>
+   </div>
+
+   {/* browse category */}
+
+   <div className="bg-cyan-100 w-full h-auto mt-14 mb-5 text-center">
+    <h2 className="text-center font-{Inter} font-semibold text-2xl pt-14">Browse by category</h2>
+    <p className="text-center font-{Inter} font-normal text-lg pt-5">Browse openings in those categories</p>
+           <div className="h-72 w-5/6 ml-32  flex ">
+              <div className="w-48 h-52 bg-cyan-300 ml-10 mt-16 mr-10 rounded-xl">
+                <div className="w-16 h-16 bg-cyan-600 rounded-full  ml-16 mt-8 pt-5 text-white font-medium">Logo</div>
+                <div className="w-full h-1/2">
+                  <p className="pt-8 font-{Inter}  font-semibold text-lg ">Primary <br /> Teacher</p>
+                </div>
+              </div>
+           </div>
+           <button className='bg-sky-600 rounded-full w-40 h-9 text-white text-center font-semibold text-sm mt-10 mb-10'>View all schools</button>
+   </div>
+
+
+   {/* video component */}
+
+
+   <div className="w-full h-96 mt-10">
+    <div className="bg-black w-full h-full ">
+      
+    </div>
+    <video src="/video.mp4" muted autoPlay loop className="object-cover w-full h-full -mt-96 opacity-60"></video>
+    <div className="w-full h-full -mt-96 text-white text-center">
+    <p className="font-{Inter} font-semibold text-lg pt-24">CANDIDATE</p>
+     <h2 className="font-{Inter} font-medium text-4xl pt-5">Find your dream job</h2>
+     <p className="font-{Inter} font-medium text-auto pt-5">Recruiters looking for talent can find your resume based on <br />keywords, job titles, skills and more.</p>
+     <button className='bg-sky-800 rounded-full w-44 h-10 text-white text-center font-semibold text-sm mt-10 mb-10'>Post a resume today</button>
+    </div>
+   </div>
+
+   {/* footer */}
+
+
+   <div className="bg-gray-200 w-full h-96">
+   <div className="flex w-full h-80 font-{Inter}">
+
+    <div className="w-1/3 h-full flex-col ml-48 mt-12">
+       <h2 className="font-{Inter} font-medium ">About</h2>
+       <p className="pt-5">SER Center, Prasadampadu, Vijayawada,<br />India - 521108</p>
+       <br />
+       <a  className=" font-semibold "href="tel:+91 9685511620">+91 9685511620</a><br /><br />
+       <a className="font-semibold" href="mailto:hello@schoolhues.com">hello@schoolhues.com</a>
         </div>
+
+    <div className="w-1/3 h-full flex mt-12"> 
+    <div className="w-1/2 h-full flex-col">
+      <h2 className="font-{Inter} font-medium  ">Company</h2>
+      <br />
+      <a href=""className="">About us</a><br /><br />
+      <a href=""className="pt-3">Blogs</a><br /><br />
+      <a href=""className="pt-3">Contact</a><br />
       </div>
+    <div className="w-1/2 h-full flex-col">
+       <h2 className="font-{Inter} font-medium ">Services</h2><br />
+       <a href="">Jobs</a><br /><br />
+       <a href="">Schools</a><br /><br />
+       <a href="">Candidate</a>
+       </div>
+    </div>
+   
+    <div className="w-1/3 h-full pt-36 ml-8">
+      <Image src="/sh_logo.png" alt="logo" width="200" height="100"/>
+    </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+   </div>
+   <div className="w-full ">
+    <hr className="w-full"/>
+    <p className="ml-44">@ 2023 SchoolHues. All Right Reserved.</p>
+   </div>
+   </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+   </div>
   )
 }
